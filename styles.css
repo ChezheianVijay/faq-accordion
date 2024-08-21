@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--Light-pink);
+}
+
+main {
+  margin: 25px 10px;
+  padding: 25px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  border-radius: 15px;
+  width: 600px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+  margin-left: 30px;
+  color: var(--Dark-purple);
+}
+
+.accordion-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+  color: var(--Dark-purple);
+  cursor: pointer;
+}
+
+.accordion-header:hover {
+  cursor: pointer;
+  color: #7f188ecc;
+}
+
+.accordion-header.active {
+  color: #ad28eb;
+}
+
+.accordion-content {
+  display: none;
+  font-size: 15px;
+  color: var(--Grayish-purple);
+}
+
+hr {
+  margin: 10px 0px;
+  border-color: purple;
+  border-style: dotted;
+  border-width: 0.1px;
+}
+
+@media (max-width: 376px) {
+  body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+  }
+  .dtbg {
+    position: absolute;
+    height: 200px;
+    left: -75%;
+    top: 0;
+  }
+  main {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    width: 80%;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .star {
+    width: 30px;
+    height: 30px;
+  }
+  h1 {
+    font-size: 32px;
+    margin-left: 18px;
+  }
+  .accordion-header {
+    margin: 10px 0px;
+  }
+  b {
+    font-size: 15px;
+    padding-right: 10px;
+  }
+  .toggle {
+    width: 27px;
+  }
+  .accordion-content {
+    display: none;
+    font-size: 15px;
+  }
+
+  hr {
+    margin: 10px 0px;
+    border-style: dotted;
+    border-width: 0.1px;
+  }
+}
